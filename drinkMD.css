@@ -1,0 +1,287 @@
+@media only screen and (max-width:1360px) {
+  
+    .header .footer {
+  
+      width:100%;
+  
+    }  
+}
+*{
+    padding:0;
+    margin-left:0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+#wrapper {
+    position: relative; 
+    padding-top: 10px;
+    max-width: 100%;
+    min-width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: block;
+}
+@media only screen and (max-width:620px) {
+    .wrapper .header .footer .location {
+      width:100%;
+    }
+}
+#header {
+    width: 100%;
+    padding:0px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    color:#6e6e6e; 
+    margin-bottom: 50px;
+    margin-top: 10px;
+    position: relative;
+}
+.logo{
+    color: #6e6e6e;
+    background: rgba(255, 255, 255, 0.466);
+    font-size: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#menu {
+    list-style:none;
+    display: flex;
+}
+
+#menu .item {
+    margin-right: 25px;
+}
+
+#menu .item a {
+    color: #6e6e6e;
+    background: rgba(255, 255, 255, 0.466);
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 12px 12px 5px 12px;
+    margin-bottom: 50px;
+    width: 80px;
+    height: auto;
+    font-style: italic;
+    transition: width 0.3s ease;
+}
+#menu .item a:hover{
+    background: rgb(63, 63, 63);
+    transition: 1s;
+}
+
+ .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 500px;
+    top: 50px;
+}
+.item:hover .dropdown-content {
+    display: block;
+}
+
+#actions {
+    display: flex;
+}
+
+.input {
+    color: #6e6e6e;
+    background: rgba(255, 255, 255, 0.466);
+    border-radius: 100px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    width: 68px;
+    transition: width 0.3s ease;
+    margin-right: 22px;
+}
+.input::placeholder {
+    color: #6e6e6e;
+}
+.btn:hover{
+    background: rgb(63, 63, 63);
+    transition: 1s;
+}
+.btn1 {
+    margin-right: 80px;
+    color: #6e6e6e;
+    width: 40px;
+    padding: 13px 10px;
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+    background: rgba(255, 255, 255, 0.466);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+}
+h3{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+    padding-left: 30%;
+}
+h3::after{
+    background-color: rgb(239, 237, 237);
+    bottom: -90px;
+    content: "";
+    display: block;
+    height: 0.1px;
+    width: 580px;
+    position: absolute;
+}
+h3::before{
+    background-color: rgb(239, 237, 237);
+    bottom: 75px;
+    content: "";
+    display: block;
+    height: 0.1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+.short-para p{
+    display: flex;
+    position:relative;
+    width: 1000px;
+    padding-left: 30%;
+}
+
+
+#Location{
+    justify-content: center;
+    align-items: center;
+}
+.Quan{
+    padding-left: 30%;
+}
+.Quan h2{
+    padding-top: 20px;
+    font-family:cursive;
+}
+.Quan p{
+    font-size: 16px;
+    margin-left: -10px;
+    margin-top: -25px;
+    margin-bottom: 1px;
+    text-decoration: 1px underline gray dotted;
+    padding: 12px;
+    font-family:'Courier New', Courier, monospace;
+    letter-spacing: -1.7px;
+}
+.Quan a{
+    color: gray;
+    text-decoration: none;
+}
+.Quan img{
+    height: 420px;
+    width: 580px;
+    border-radius: 30px 30px 30px 30px;
+}
+.Quan video{
+    height: 420px;
+    width: 580px;
+    border-radius: 30px 30px 30px 30px;
+    object-fit: none;
+}
+.btn{
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    font-family:'Lora', serif;
+    text-align: center;
+    font-size: 14px;
+    height: 30px;
+    width: 80px;
+    margin-top: 30px;
+    padding: -30px;
+    position: relative;
+}
+.btn:hover{
+    color: aliceblue;
+    background-color: black;
+    transition: 0.5s;
+}
+.btn::after{
+    background-color: rgb(239, 237, 237);
+    bottom: -40px;
+    content: "";
+    display: block;
+    height: 0.1px;
+    width: 580px;
+    position: absolute;
+}
+.Thelastbutton{
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    font-family:'Lora', serif;
+    text-align: center;
+    font-size: 14px;
+    height: 30px;
+    width: 80px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: -30px;
+    position: relative;
+}
+.Thelastbutton:hover{
+    color: aliceblue;
+    background-color: black;
+    transition: 0.5s;
+}
+
+#footer {
+    width: 100%;
+    background:rgb(0,0,0,0.85);
+    height: 30vh;
+    padding-top:50px;
+    color:#fff;
+    left: 0;
+    position: absolute;
+    margin-top: 20px;
+}
+#footer .box{
+    padding-left: 250px;
+}
+#footer .box2{
+    display: inline-block;
+    justify-content:center;
+    padding-left: 578px;
+    position:absolute;
+    margin-top: -100px;
+}
+#footer .box2 .quick-menu ,.item a{
+    padding-left: 180px;
+    color: #fff;
+    text-decoration: none;
+}
+h4 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding-top: 50px;
+    margin-left: 360px;
+    font-size: 30px;
+    position: relative;
+}
+.logo1{
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(185, 185, 185, 0.705);
+}
