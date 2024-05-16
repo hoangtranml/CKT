@@ -1,0 +1,385 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.6rem;
+    height: 100%;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    background-color: #222831;
+    box-shadow: 0 3px 5px rgb(92, 87, 87);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left a{
+    font-size: 40px;
+    left: 15px;
+    top: 3px;
+    position: relative;
+    align-content: center;
+    color: white;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navigation {
+    position: relative;
+    width: 100%;
+    height: 10 px;
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 70px;
+    height: 60px;
+    list-style: none;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 82px;
+    font-size: 1.7em;
+    text-align: center;
+    color: white;
+    transition: .5s;
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-10px);
+}
+
+.navigation ul li a .circle {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1.8px solid #fff;
+    transform: translateY(-20px) scale(0);
+}
+
+.navigation ul li.active a .circle {
+    transition: .5s;
+    transition-delay: .5s;
+    transform: translateY(-15px) scale(1);
+}
+
+.indicator {
+    position: absolute;
+    top: -7px;
+    width: 70px;
+    height: 60px;
+    background-color: #06021b;
+    border: 6px solid #06021b;
+    transition: .5s;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -29px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-top-right-radius: 30px;
+    box-shadow: 5.5px -10px 0 5px #06021b;
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: -29px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-top-left-radius: 30px;
+    box-shadow: -5.5px -10px 0 5px #06021b;
+}
+
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(70px * 4));
+}
+
+.nav-right {
+    display: flex;
+    cursor: pointer;
+}
+
+.messe {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.messe i{
+    font-size: 19px;
+    position: relative;
+    left: 8px;
+    top: 2px;
+}
+
+.messe:hover {
+    background-color: #fff5;
+}
+
+.bell {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.bell i {
+    font-size: 19px;
+    left: 9px;
+    top: 2px;
+    position: relative;
+}
+
+.bell:hover {
+    background-color: #fff5;
+}
+
+.bar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.bar i {
+    font-size: 19px;
+    left: 9px;
+    top: 2px;
+    position: relative;
+}
+
+.bar:hover {
+    background-color: #fff5;
+}
+
+.main {
+    width: 500px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #222831;
+    box-shadow: 10px 10px 10px #475365;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.main .upload .upload-top {
+    width: 100%;
+    height: 50px;
+    border-bottom-width: 0.5px;
+    border-bottom-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .upload h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main .upload .upload-center .img_and_name {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    left: 15px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.main .upload .upload-center .img_and_name img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main .upload .upload-center .img_and_name p {
+    color: white;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.main .upload .upload-center input {
+    border-radius: 8px;
+    padding-left: 10px;
+    width: 90%;
+    height: 70px;
+    position: relative;
+    margin-top: 10px;
+    left: 20px;
+    background-color: #222831;
+    color: white;
+    text-wrap: wrap;
+    word-break: break-word;
+    text-align: start;
+    outline-width: 0px;
+    overflow-y: visible;
+}
+
+.main .upload .upload-center input::placeholder {
+    color: rgb(189, 185, 185);
+    font-size: 15px;
+}
+
+.main .upload .upload-center .icon {
+    display: flex;
+    box-sizing: border-box;
+    width: 95%;
+    height: 50px;
+    position: relative;
+    margin-top: 10px;
+    left: 2.5%;
+    border-width: 0.8px;
+    border-color: #fff;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .upload .upload-center .image {
+    width: 95%;
+    height: 250px;
+    border: dashed;
+    border-radius: 15px;
+    border-width: 2.5px;
+    border-color: rgb(224, 215, 215);
+    position: relative;
+    left: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+.main .upload .upload-center .icon .icon-left p {
+    color: white;
+    font-size: 15px;
+    position: relative;
+    left: 7px;
+}
+
+.main .upload .upload-center .icon .icon-right {
+    position: relative;
+    right: 7px;
+}
+.main .upload .upload-center .icon .icon-right i {
+    font-size: 19px;
+    padding-left: 7px;
+    cursor: pointer;
+}
+
+.main .upload .upload-center .icon .icon-right #one {
+    color: royalblue;
+}
+
+.main .upload .upload-center .icon .icon-right #two {
+    color: goldenrod;
+}
+
+.main .upload .upload-center .icon .icon-right #three {
+    color: red;
+}
+
+.main .upload .upload-bot {
+    position: relative;
+    left: 2.5%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.main .upload .upload-bot button {
+    width: 95%;
+    height: 45px;
+    background-color: royalblue;
+    border-radius: 7px;
+    color: white;
+}
+
+.main .upload .upload-bot button:hover {
+    background-color: rgb(58, 94, 202);
+}

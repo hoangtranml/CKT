@@ -1,0 +1,344 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.6rem;
+    height: 100%;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    background-color: #222831;
+    box-shadow: 0 3px 5px rgb(92, 87, 87);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left a{
+    font-size: 40px;
+    left: 15px;
+    top: 20px;
+    position: relative;
+    align-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.navigation {
+    position: relative;
+    width: 100%;
+    height: 10 px;
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 70px;
+    height: 60px;
+    list-style: none;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 82px;
+    font-size: 1.7em;
+    text-align: center;
+    color: white;
+    transition: .5s;
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-10px);
+}
+
+.navigation ul li a .circle {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1.8px solid #fff;
+    transform: translateY(-20px) scale(0);
+}
+
+.navigation ul li.active a .circle {
+    transition: .5s;
+    transition-delay: .5s;
+    transform: translateY(-15px) scale(1);
+}
+
+.indicator {
+    position: absolute;
+    top: -7px;
+    width: 70px;
+    height: 60px;
+    background-color: #06021b;
+    border: 6px solid #06021b;
+    transition: .5s;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -29px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-top-right-radius: 30px;
+    box-shadow: 5.5px -10px 0 5px #06021b;
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: -29px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-top-left-radius: 30px;
+    box-shadow: -5.5px -10px 0 5px #06021b;
+}
+
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(70px * 4));
+}
+
+/*
+.nav-middle  {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+
+.nav-middle a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 15px 15px 7px 15px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-middle a.active {
+    color: white;
+}
+
+.nav-middle a.active::after {
+    background-color: white;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+.nav-middle a.not-active {
+    transition: 0.3s;
+}
+
+.nav-middle a.not-active:hover {
+    transform: scale(1.1);
+}
+*/
+
+.nav-right {
+    display: flex;
+    cursor: pointer;
+}
+
+.messe {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.messe i{
+    font-size: 19px;
+    position: relative;
+    left: 8px;
+    top: 2px;
+}
+
+.messe:hover {
+    background-color: #fff5;
+}
+
+.bell {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.bell i {
+    font-size: 19px;
+    left: 9px;
+    top: 2px;
+    position: relative;
+}
+
+.bell:hover {
+    background-color: #fff5;
+}
+
+.bar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.bar i {
+    font-size: 19px;
+    left: 9px;
+    top: 2px;
+    position: relative;
+}
+
+.bar:hover {
+    background-color: #fff5;
+}
+
+.main {
+    height: 80%;
+    width: 80%;
+    margin-top: 120px;
+    margin-left: 10%;
+}
+
+.main .top {
+    display: flex;
+    height: 40px;
+    
+    background-color: rgb(196, 229, 147);
+    padding: 10px;
+    
+    border-radius: 12px;
+    position: relative;
+}
+
+.main .top h1 {
+    font-size: 20px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.main .top i {
+    font-size: 28px;
+    position: relative;
+    bottom: 1.5px;
+}
+
+.main .list-news  {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    
+    background-color: #222831;
+    border-radius: 7px;
+    z-index: -1;
+    margin-bottom: 25px;
+}
+
+.main .list-news .news {
+    display: flex;
+    padding: 10px;
+    border-bottom: solid .5px black;
+    position: relative;
+}
+
+.main .list-news .news img {
+    width: 450px;
+    height: 300px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.main .list-news .news h2 {
+    position: relative;
+    left: 10px;
+    text-transform: uppercase;
+    color: white;   
+}
+
+.main .list-news .news p {
+    position: relative;
+    left: 10px;
+    color: rgb(222, 219, 219);
+    padding-right: 10px;
+}
+
+
+
+
+
+

@@ -1,0 +1,654 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.6rem;
+    background-color: black;
+}
+/*-----------------------------------------nav------------------------------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    background-color: #222831;
+    box-shadow: 0 3px 5px rgb(92, 87, 87);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left a{
+    font-size: 40px;
+    left: 15px;
+    top: 20px;
+    position: relative;
+    align-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.navigation {
+    position: relative;
+    width: 100%;
+    height: 10 px;
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 70px;
+    height: 60px;
+    list-style: none;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 82px;
+    font-size: 1.7em;
+    text-align: center;
+    color: white;
+    transition: .5s;
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-10px);
+}
+
+.navigation ul li a .circle {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1.8px solid #fff;
+    transform: translateY(-20px) scale(0);
+}
+
+.navigation ul li.active a .circle {
+    transition: .5s;
+    transition-delay: .5s;
+    transform: translateY(-15px) scale(1);
+}
+
+.indicator {
+    position: absolute;
+    top: -7px;
+    width: 70px;
+    height: 60px;
+    background-color: #06021b;
+    border: 6px solid #06021b;
+    transition: .5s;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -29px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-top-right-radius: 30px;
+    box-shadow: 5.5px -10px 0 5px #06021b;
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: -29px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-top-left-radius: 30px;
+    box-shadow: -5.5px -10px 0 5px #06021b;
+}
+
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(70px * 4));
+}
+
+/*
+.nav-middle  {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+
+.nav-middle a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 15px 15px 7px 15px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-middle a.active {
+    color: white;
+}
+
+.nav-middle a.active::after {
+    background-color: white;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+.nav-middle a.not-active {
+    transition: 0.3s;
+}
+
+.nav-middle a.not-active:hover {
+    transform: scale(1.1);
+}
+*/
+.nav-right {
+    display: flex;
+    cursor: pointer;
+}
+
+.messe {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.messe i{
+    font-size: 19px;
+    position: relative;
+    left: 8px;
+    top: 2px;
+}
+
+.messe:hover {
+    background-color: #fff5;
+}
+
+.bell {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.bell i {
+    font-size: 19px;
+    left: 9px;
+    top: 2px;
+    position: relative;
+}
+
+.bell:hover {
+    background-color: #fff5;
+}
+
+.bar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.bar i {
+    font-size: 19px;
+    left: 9px;
+    top: 2px;
+    position: relative;
+}
+
+.bar:hover {
+    background-color: #fff5;
+}
+
+/*-----------------------------------------container------------------------------------------*/
+
+.container {
+    background-color: black;
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+}
+
+.container .left-panel {
+    width: 25%;
+    height: 100dvh;
+    border-right: 1px solid gray;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.container .left-panel::-webkit-scrollbar{
+    width: 7px;
+}
+
+.container .left-panel::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: #f5f5f5;
+}
+
+.container .left-panel:hover::-webkit-scrollbar-thumb{
+    background: #cccccc;
+}
+
+.container .left-panel ul li {
+    list-style: none;
+    display: flex;
+    padding: .7rem 1rem;
+    align-items: center;
+    transition: .3s;
+    position: relative;
+    top: 15px;
+    margin: 0 10px 0 10px;
+}
+
+.container .left-panel ul li input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    align-content: center;
+    background-color: rgb(35, 35, 35);
+    font-size: 15px;
+    color:aliceblue ;
+}
+
+.container .left-panel ul li.search i {
+    font-size: 18px;
+    cursor: pointer;
+    color: whitesmoke;
+    padding-right: 10px;
+}
+
+.container .left-panel ul li.club:hover {
+    background-color: rgb(35, 35, 35);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.container .left-panel img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+/*.container .left-panel img:hover {
+    transform: scale(1.1);
+}*/
+
+.container .left-panel a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    margin-left: 10px;
+    color: white;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.container .left-panel .footer-links {
+    padding: .7rem 1rem;
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+}
+
+.container .left-panel .footer-links .name-account {
+    color: white;
+    font-size: 18px;
+    align-content: center;
+    padding-left: 10px;
+    position: relative;
+    bottom: 5px;
+}
+
+
+.container .middle-panel{
+    width: 500px;
+    height: auto;
+    padding: 20px 20px 0 20px;
+    background: black;
+    margin-left: 31%;
+}
+
+.container .middle-panel .post{
+    margin: 10px;
+    display: grid;
+    width: 500px;
+    height: auto;
+    background: black;    
+    padding-top: 7px;
+    padding-bottom: 13px;
+    border-bottom: solid rgb(245, 245, 245);
+    border-bottom-width: 0.8px;
+}
+
+.container .middle-panel .post .post_top{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.container .middle-panel .post .post_top .img_and_name{
+    display: flex;
+    align-items: center;
+}
+
+.container .middle-panel .post .post_top .img_and_name img{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.container .middle-panel .post .post_top .img_and_name .name .name{
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    top: 6px;
+    font-size: 14px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container .middle-panel .post .post_top .img_and_name .name .time{
+    font-size: 13px;
+    color: #919191;
+    position: relative;
+    bottom: 4px;
+    
+}
+
+.container .middle-panel .post .post_top .img_and_name .name .time i{
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.container .middle-panel .post .post_top .menu{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    
+}
+
+.container .middle-panel .post .post_top .menu:hover{
+    background: gray;
+    cursor: pointer;
+}
+
+.container .middle-panel .post .post_top .menu i{
+    line-height: 35px;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    left: 8px;
+    
+}
+
+.container .middle-panel .post .title p {
+    color: whitesmoke;
+    margin-bottom: 5px;
+    padding-left: 3px;
+}
+
+/*.container .middle-panel .post img{
+    width: 500px;
+    height: auto;
+    max-height: 650px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}*/
+
+.container .middle-panel .swiper {
+    width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.container .middle-panel .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .middle-panel .swiper-slide img {
+    display: block;
+    width: 500px;
+    height: auto;
+    max-height: 650px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.container .middle-panel .swiper-button-next, .swiper-button-prev {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: black;
+    --swiper-navigation-size: 12px;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    
+}
+
+.container .middle-panel .swiper-pagination {
+    --swiper-theme-color: white;
+}
+
+.container .middle-panel .swiper-pagination-bullet {
+    background-color: white;
+}
+
+.container .middle-panel .swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .middle-panel .post .like{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.container .middle-panel .post .like .like_icon{
+    display: flex;
+    align-items: center;
+}
+
+.container .middle-panel .post .like .like_icon i{
+    font-size: 20px;
+    margin-right: 8px;
+    color: #919191;
+}
+
+.container .middle-panel .post .like .like_icon i.activi{
+    color: red;
+}
+
+.container .right-panel {
+    height: 100dvh;
+    width: 350px;
+    background-color: black;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    right: 0;
+}
+
+.container .right-panel::-webkit-scrollbar{
+    width: 7px;
+}
+
+.container .right-panel::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: #f5f5f5;
+}
+
+.container .right-panel:hover::-webkit-scrollbar-thumb{
+    background: #cccccc;
+}
+
+.container .right-panel .contact {
+    margin-top: 50px;
+    justify-content: space-between;
+    color: gray;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 8px;
+}
+
+.container .right-panel .contact h2 {
+    font-size: 17px;
+}
+
+.container .right-panel .contact a {
+    font-size: 13px;
+    text-decoration: none;
+    position: relative ;
+    right: 10px;
+    color: white;
+}
+
+.container .right-panel .list-contact .person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.container .right-panel .list-contact .person img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.container .right-panel .list-contact .person .info .name {
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    top: 6px;
+    font-size: 14px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container .right-panel .list-contact .person .info .recommened {
+    font-size: 10px;
+    color: #919191;
+    position: relative;
+    bottom: 4px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container .right-panel .list-contact .person .text {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.container .right-panel .list-contact .person .text p {
+    color: rgb(114, 114, 244);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.container .right-panel .list-contact .person .text p:hover {
+    color: white;
+}
+
+.container .right-panel .my-info {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+}
+
+.container .right-panel .my-info p {
+    font-size: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: grey;
+}
+
+
+
