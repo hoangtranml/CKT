@@ -251,11 +251,14 @@ nav {
 .top .picture ul {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    margin-top: 56vh;
+    list-style: none;
 }
 
 .top .picture ul li {
-    color:black;
+    color: white;
+    font-size: 18px;
+  
 }
 
 .list-teacher {
